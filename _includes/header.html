@@ -4,7 +4,9 @@
 
     <div class="links">
       {% for item in site.data.settings.navigation %}
-      <a class="item{% if page.url == item.url %} -active{% endif %}"
+      <a class="item{% if page.url == item.url
+                          or (page.navigation_group != nil and page.navigation_group == item.group)
+                    %} -active{% endif %}"
          href="{{ item.url }}">{{ item.title }}</a>
       {% endfor %}
     </div>
