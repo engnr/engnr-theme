@@ -1,0 +1,7 @@
+.blog-feed {
+  @include one-column-container;
+
+  > .content ~ .title {
+    margin-top: $bigSpacer;
+  }
+}
