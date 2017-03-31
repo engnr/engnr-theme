@@ -1,0 +1,9 @@
+.blog-post {
+  @extend .page-hero;
+
+  > .container > .content {
+    @include one-column-container;
+    margin-top: $mediumSpacer;
+  }
+}
+
