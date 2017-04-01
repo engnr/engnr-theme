@@ -1,5 +1,7 @@
 .vertical-list {
-  @include icons;
+  .icon {
+    @extend .icon-item;
+  }
 
   &.-center {
     > .item {

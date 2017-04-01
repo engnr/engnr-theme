@@ -43,38 +43,56 @@
 
 @mixin icons {
 
-  .icon {
-    &.-windows {
-      @include icon;
-      &:before { content: $fa-var-windows; }
-    }
-
-    &.-mac {
-      @include icon;
-      &:before { content: $fa-var-apple; }
-    }
-
-    &.-linux {
-      @include icon;
-      &:before { content: $fa-var-linux; }
-    }
-
-    &.-yes {
-      @include icon;
-      &:before { content: $fa-var-check; color: $green; }
-    }
-
-    &.-no {
-      @include icon;
-      &:before { content: $fa-var-minus; color: $red; }
-    }
-
-
-    &.-padded {
-      margin-right: 24px;
-    }
-
-    @include sizes;
-    @include colors;
+  &.-windows:before {
+    @include icon;
+    content: $fa-var-windows;
   }
+
+  &.-mac:before {
+    @include icon;
+    content: $fa-var-apple;
+  }
+
+  &.-linux:before {
+    @include icon;
+    content: $fa-var-linux;
+  }
+
+  &.-yes:before {
+    @include icon;
+    content: $fa-var-check; color: $green;
+  }
+
+  &.-no:before {
+    @include icon;
+    content: $fa-var-minus; color: $red;
+  }
+
+  &.-date:before, &.-event {
+    @include icon;
+    content: $fa-var-calendar;
+  }
+
+  &.-date:before {
+    @include icon;
+    content: $fa-var-calendar-o;
+  }
+
+  &.-category:before {
+    @include icon;
+    content: $fa-var-folder;
+  }
+
+  &.-author:before {
+    @include icon;
+    content: $fa-var-user;
+  }
+
+
+  &.-padded {
+    margin-right: 24px;
+  }
+
+  @include sizes;
+  @include colors;
 }
