@@ -1,5 +1,5 @@
 .sub-nav {
-  padding: $mediumSpacer / 2;
+  padding: $smallSpacer;
   border-bottom: 1px solid $very-light-grey;
 
   > .container {
@@ -22,7 +22,7 @@
 
     > .item {
       color: $grey;
-      padding: $mediumSpacer / 2;
+      padding: $smallSpacer;
       border-bottom: 0;
       line-height: 20px;
 
