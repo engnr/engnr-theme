@@ -1,0 +1,31 @@
+.item-list {
+  margin: 0;
+  padding: 0;
+
+  > .item, li {
+    @include sizes;
+    @extend .icon-item;
+    padding: 0;
+    margin-right: $smallSpacer;
+    list-style-type: none;
+  }
+
+  &.-center {
+    > .item, li {
+      text-align: center;
+    }
+  }
+
+  &.-vertical {
+    > .item, li {
+      display: block;
+    }
+  }
+
+  &.-horizontal {
+    > .item, li {
+      display: inline;
+    }
+  }
+}
+

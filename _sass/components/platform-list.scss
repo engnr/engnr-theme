@@ -1,5 +1,5 @@
 .platform-list {
-  @extend .vertical-list;
+  @extend .item-list;
   @include column(1/3, $cycle: 3);
 }
 

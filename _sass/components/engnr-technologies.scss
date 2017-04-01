@@ -1,16 +1,11 @@
-.horizontal-list {
-
-  @include icons;
+.engnr-technologies {
+  @extend .item-list;
 
   > .item {
     @include column(1/4, $cycle: 4);
-    @include sizes;
-
-    text-align: center;
+    font-weight: $boldFont;
     margin-top: 0.4em;
     margin-bottom: 0.4em;
-    display: inline;
-    font-weight: 600;
 
     &:first-child {
       text-align: left;
@@ -21,4 +16,3 @@
     }
   }
 }
-
