@@ -110,3 +110,19 @@
   @include sizes;
   @include colors;
 }
+
+
+@mixin dash-list {
+  ul > li {
+    list-style-type: none;
+    margin-left: -20px;
+
+    &:before {
+      display: inline-block;
+      content: "—";
+      width: 15px;
+      margin-right: 5px;
+      line-height: 24px;
+    }
+  }
+}
