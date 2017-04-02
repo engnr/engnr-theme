@@ -78,6 +78,11 @@
     content: $fa-var-calendar-o;
   }
 
+  &.-time:before {
+    @include icon;
+    content: $fa-var-clock-o;
+  }
+
   &.-category:before {
     @include icon;
     content: $fa-var-folder;
@@ -88,6 +93,15 @@
     content: $fa-var-user;
   }
 
+  &.-price:before {
+    @include icon;
+    content: $fa-var-rub;
+  }
+
+  &.-location:before {
+    @include icon;
+    content: $fa-var-map-marker;
+  }
 
   &.-padded {
     margin-right: 24px;
