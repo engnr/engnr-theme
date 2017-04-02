@@ -1,0 +1,26 @@
+.meta-list {
+  @extend .item-list;
+  @extend .h6;
+  color: $grey;
+
+  > .item, li {
+    display: inline;
+
+    &:before {
+      width: 15px;
+    }
+  }
+
+  &.-vertical {
+    margin-left: -$smallSpacer;
+    line-height: 24px;
+
+    > .item, li {
+      &:before {
+        text-align: center;
+        width: $smallSpacer;
+      }
+    }
+  }
+}
+

@@ -68,12 +68,12 @@
     content: $fa-var-minus; color: $red;
   }
 
-  &.-date:before, &.-event {
+  &.-date:before {
     @include icon;
     content: $fa-var-calendar;
   }
 
-  &.-date:before {
+  &.-opendate:before {
     @include icon;
     content: $fa-var-calendar-o;
   }
