@@ -1,0 +1,71 @@
+{% capture _date-range %}
+{% comment %}
+Test case:
+  - start_date: 2017-03-01
+    end_date: 2017-03-01
+  - start_date: 2017-03-01
+    end_date: 2017-03-02
+  - start_date: 2017-03-31
+    end_date: 2017-04-01
+  - start_date: 2016-12-31
+    end_date: 2017-01-01
+  - start_date: 2016-03-01
+    end_date: 2016-03-01
+  - start_date: 2016-03-01
+    end_date: 2016-03-02
+  - start_date: 2016-03-31
+    end_date: 2016-04-01
+  - start_date: 2016-03-31
+    end_date: 2017-03-01
+{% endcomment %}
+
+{% if include.date != nil %}
+  {% assign start = include.date %}
+  {% assign end = include.date %}
+{% else %}
+  {% assign start = include.start_date %}
+  {% if include.end_date == nil %}
+    {% assign end = include.start_date %}
+  {% else %}
+    {% assign end = include.end_date %}
+  {% endif %}
+{% endif %}
+
+{% assign sd = start | date: "%-d" %}
+{% assign sm = start | date: "%-m" %}
+{% assign sy = start | date: "%Y" %}
+
+{% assign ed = end | date: "%-d" %}
+{% assign em = end | date: "%-m" %}
+{% assign ey = end | date: "%Y" %}
+
+{% assign current_year='now' | date: "%Y" %}
+{% assign from = '' %}
+{% assign to = '' %}
+
+{% if sy != ey %}
+  {% assign from = sy %}
+{% endif %}
+
+{% if sy != ey or ey != current_year %}
+  {% assign to = ey %}
+{% endif %}
+
+{% if sm != em or from != empty %}
+  {% capture month_string %}{% include date-month.html date=start %}{% endcapture %}
+  {% assign from = from | prepend: month_string %}
+{% endif %}
+
+{% capture month_string %}{% include date-month.html date=end %}{% endcapture %}
+{% assign to = to | prepend: month_string %}
+
+{% if sd != ed or from != empty %}
+  {% assign from = from | prepend: sd %}
+{% endif %}
+{% assign to = to | prepend: ed %}
+
+{% endcapture %}{%
+  if from != empty
+%}<time datetime="{{ start }}">{{ from }}</time> – {% 
+  endif
+%}<time datetime="{{ end }}">{{ to }}</time>

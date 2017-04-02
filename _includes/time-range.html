@@ -1,0 +1,5 @@
+{%
+  assign start = include.start_time | date: "%R"
+%}{%
+  assign end = include.end_time | date: "%R"
+%}{{ start }} – {{ end }}
