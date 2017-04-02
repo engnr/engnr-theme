@@ -1,0 +1,19 @@
+.post-feed {
+  @include one-column-container;
+}
+
+.post-item {
+  margin-bottom: $bigSpacer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > .title {
+    margin-bottom: 10px;
+  }
+
+  > .content {
+    margin-top: $smallSpacer;
+  }
+}
