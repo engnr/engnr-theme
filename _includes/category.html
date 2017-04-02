@@ -1,0 +1,9 @@
+{% assign category = site.data.i18n.category
+  | where: "category", include.category
+  | first
+%}
+{% if category.title %}
+  {{ category.title }}
+{% else %}
+  {{ include.category }}
+{% endif %}
