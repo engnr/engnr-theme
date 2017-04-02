@@ -1,0 +1,8 @@
+{{ include.date | date: "%-d" }}
+{% include date-month.html date=include.date %}
+{% assign current_year='now' | date: "%Y" %}
+{% assign year=include.date | date: "%Y" %}
+{% if current_year != year %}
+  {{ year }}
+{% endif %}
+
