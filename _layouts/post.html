@@ -4,5 +4,17 @@ layout: default
 
 <div class="post-page">
   <h1 class="title">{{ page.title }}</h1>
+
+  <ul class="meta-list _center">
+    <li class="item -date">
+      <time datetime="{{ page.date | date: "%F" }}">
+        {% include date-string.html date=page.date %}
+      </time>
+    </li>
+    {% if page.author %}
+      <li class="item -author">{{ page.author }}</li>
+    {% endif %}
+  </ul>
+
   <div class="content">{{ content }}</div>
 </div>
