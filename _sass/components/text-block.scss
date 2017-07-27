@@ -1,0 +1,16 @@
+.text-block {
+  line-height: 32px;
+
+  &.-one {
+    @include one-column-container;
+  }
+
+  &.-two {
+    @include column(1/2, $cycle: 2, $gutter: 8);
+  }
+
+  > .header {
+    margin-top: $bigSpacer;
+  }
+}
+

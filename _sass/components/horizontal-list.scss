@@ -1,0 +1,24 @@
+.horizontal-list {
+
+  @include icons;
+
+  > .item {
+    @include column(1/4, $cycle: 4);
+    @include sizes;
+
+    text-align: center;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    display: inline;
+    font-weight: 600;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+

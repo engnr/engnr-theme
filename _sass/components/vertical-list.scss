@@ -1,0 +1,9 @@
+.vertical-list {
+  @include icons;
+
+  &.-center {
+    > .item {
+      text-align: center;
+    }
+  }
+}

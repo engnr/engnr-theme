@@ -1,0 +1,22 @@
+.arrow-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+
+  > .item {
+    margin-right: 1em;
+    display: inline-block;
+
+    &:after {
+      content: "\2192";
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+
+    &:last-child:after {
+      content: ".";
+      margin-left: 0;
+    }
+  }
+}

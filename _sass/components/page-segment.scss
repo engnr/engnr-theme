@@ -1,0 +1,38 @@
+.page-segment {
+
+  > .container {
+    @include container;
+  }
+
+
+  &.-padded {
+    margin-top: $bigSpacer;
+  }
+
+  &.-masthead {
+    padding-top: $bigSpacer;
+    padding-bottom: $bigSpacer;
+    background: linear-gradient(90deg, $teal 0%, $blueprint 40%, $dark-violet 90%);
+
+    > .container > .title {
+      font-weight: $thinFont;
+      text-align: center;
+      color: $white;
+    }
+  }
+
+  &.-divided {
+    border-top-color: $light-grey;
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    &.-green {
+      border-top: 2px solid $green;
+    }
+
+    &.-blue {
+      border-top: 2px solid $light-blue;
+    }
+  }
+}
+

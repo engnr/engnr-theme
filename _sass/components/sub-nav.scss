@@ -1,0 +1,35 @@
+.sub-nav {
+  padding: $mediumSpacer / 2;
+  border-bottom: 1px solid $very-light-grey;
+
+  > .container {
+    @include narrow-container;
+    position: relative;
+  }
+
+  > .container > .header {
+    @extend h5;
+    font-weight: $mediumFont;
+    display: inline;
+    line-height: 20px;
+  }
+
+  .container > .links {
+    @extend .h6;
+    position: absolute;
+    right: 0;
+    display: inline;
+
+    > .item {
+      color: $grey;
+      padding: $mediumSpacer / 2;
+      border-bottom: 0;
+      line-height: 20px;
+
+      &.-active {
+        color: $black;
+        border-bottom: 2px solid $red;
+      }
+    }
+  }
+}

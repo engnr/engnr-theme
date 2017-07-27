@@ -1,0 +1,31 @@
+
+{% if page.category %}
+<div class="sub-nav">
+  <div class="container">
+
+    {% for item in site.pages %}
+    {% if item.category == page.category and item.main_page %}
+      <h3 class="header">{{ item.title }}</h3>
+      {% break %}
+    {% endif %}
+    {% endfor %}
+
+
+    <div class="links">
+    {% assign pages = site.pages | sort: "title" %}
+    {% for item in pages %}
+    {% if item.category == page.category and item.main_page != true %}
+
+      <a class="item{% if page.url == item.url %} -active{% endif %}"
+         href="{{ site.baseurl }}{{ item.url }}">
+        {{ item.title }}
+      </a>
+
+    {% endif %}
+    {% endfor %}
+    </div>
+
+  </div>
+</div>
+{% endif %}
+

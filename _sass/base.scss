@@ -1,0 +1,49 @@
+
+html, body {
+  min-width: $minPageWidth;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  color: $black;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $regularFont;
+}
+
+h1, .h1 { font-size: 54px; }
+h2, .h2 { font-size: 30px; }
+h3, .h3 { font-size: 24px; }
+h4, .h4 { font-size: 21px; }
+h5, .h5 { font-size: 16px; }
+h6, .h6 { font-size: 14px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $blackFont;
+}
+
+p {
+  font-size: $fontSize;
+  margin-bottom: 16px;
+}
+
+a {
+  padding-bottom: 0px;
+  border-bottom: 1px solid;
+  color: $blue;
+  border-color: $light-blue;
+  line-height: 20px;
+  text-decoration: none;
+
+  &:hover, &:visited:hover {
+    text-decoration: none;
+    color: $red;
+    border-color: $light-red;
+  }
+  &:visited {
+    color: $violet;
+    border-color: $light-violet;
+    text-decoration: none;
+  }
+}
+
+

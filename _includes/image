@@ -1,0 +1,1 @@
+<img class="ui {{ include.class }} image" src="/images/{{ include.src }}" />

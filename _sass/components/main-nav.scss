@@ -1,0 +1,42 @@
+
+.main-nav {
+  padding: $mediumSpacer;
+  border-bottom: 1px solid $very-light-grey;
+
+  > .container {
+    @include wide-container;
+    position: relative;
+  }
+
+  .container > .brand {
+    @extend .h2;
+    color: $black;
+    font-weight: $boldFont;
+    border-bottom: 0;
+
+    &:hover {
+      color: $blueprint;
+    }
+  }
+
+
+  .container > .links {
+    position: absolute;
+    right: 0;
+    display: inline;
+
+    > .item {
+      margin-right: 30px;
+      color: $black;
+
+      &.-active {
+        color: $blueprint;
+        border-bottom: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

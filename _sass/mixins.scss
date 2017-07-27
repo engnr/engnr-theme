@@ -1,0 +1,80 @@
+@mixin narrow-container {
+  @include center;
+  max-width: $minPageWidth;
+}
+@mixin container {
+  @include center;
+  max-width: $pageWidth;
+}
+
+@mixin wide-container {
+  @include center;
+  max-width: $pageWideWidth;
+}
+
+@mixin one-column-container {
+  @include column(12/16, $offset: 2/16);
+}
+
+@mixin two-column-container {
+  @include column(1/2, $cycle: 2, $gutter: 0);
+}
+
+@mixin sizes {
+  &.-mini     { font-size: $mini; }
+  &.-tiny     { font-size: $tiny; }
+  &.-small    { font-size: $small; }
+  &.-large    { font-size: $large; }
+  &.-big      { font-size: $big; }
+  &.-huge     { font-size: $huge; }
+  &.-massive  { font-size: $massive; }
+}
+
+@mixin colors {
+  &.-blueprint   { color: $blueprint; }
+  &.-blue        { color: $blue; }
+  &.-violet      { color: $violet; }
+  &.-teal        { color: $teal; }
+}
+
+@mixin icon {
+  @include fa-icon;
+}
+
+@mixin icons {
+
+  .icon {
+    &.-windows {
+      @include icon;
+      &:before { content: $fa-var-windows; }
+    }
+
+    &.-mac {
+      @include icon;
+      &:before { content: $fa-var-apple; }
+    }
+
+    &.-linux {
+      @include icon;
+      &:before { content: $fa-var-linux; }
+    }
+
+    &.-yes {
+      @include icon;
+      &:before { content: $fa-var-check; color: $green; }
+    }
+
+    &.-no {
+      @include icon;
+      &:before { content: $fa-var-minus; color: $red; }
+    }
+
+
+    &.-padded {
+      margin-right: 24px;
+    }
+
+    @include sizes;
+    @include colors;
+  }
+}

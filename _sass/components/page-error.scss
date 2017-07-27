@@ -1,0 +1,32 @@
+.page-error {
+    @include icons;
+
+    width: 100%;
+    height: 80%;
+
+    padding-top: $bigSpacer;
+    padding-bottom: $bigSpacer;
+
+    background: url(/assets/images/space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    > .header, > .text {
+      position: relative;
+      color: $white;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    > .header {
+      top: 30%;
+    }
+
+    > .text {
+      @extend .h2;
+      top: 50%;
+      font-weight: $boldFont;
+    }
+}
