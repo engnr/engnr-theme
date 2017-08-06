@@ -31,8 +31,10 @@ layout: compress
   <title>{{ site.title }}</title>
 
   {% if jekyll.environment == "production" %}
-    {% include google_analytics.html %}
-    {% include yandex_metrika.html %}
+    {% include google_analytics.html
+       tracking_id = site.integrations.google_analytics.id %}
+    {% include yandex_metrika.html
+       tracking_id = site.integrations.yandex_metrika.id %}
   {% endif %}
 </head>
 <body>
