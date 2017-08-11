@@ -1,0 +1,66 @@
+---
+---
+.theme-header {
+  border-bottom: 1px solid #aaa;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 250px 50px 20px;
+}
+
+.theme-block {
+  margin-top: 150px;
+  margin-bottom: 150px;
+
+  > *:not(.example) { margin: 0 150px; }
+
+  > .header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  > .component { }
+  > .component:before {
+    content: "Component: ";
+    color: rgba(100,100,150,0.5);
+  }
+
+  > .element { }
+  > .element:before {
+    content: "Element: ";
+    color: rgba(100,100,150,0.5);
+  }
+
+  > .variant {
+    margin-bottom: 0;
+    margin-top: 25px;
+
+  }
+  > .variant:before {
+    content: "Variant: ";
+    color: rgba(100,100,150,0.5);
+  }
+
+  > .example { margin: 25px 0 70px; }
+  > .example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  > .example.-highlight {
+    background-color: rgba(100,100,150, 0.05);
+    overflow: auto;
+  }
+
+  > .example.-padded { margin: 70px 150px; }
+
+  > .highlight {
+    color: #888;
+    position: absolute;
+    right: 0;
+  }
+}
+
