@@ -103,6 +103,16 @@
     content: $fa-var-map-marker;
   }
 
+  &.-tag:before {
+    @include icon;
+    content: $fa-var-tag;
+  }
+
+  &.-briefcase:before {
+    @include icon;
+    content: $fa-var-briefcase;
+  }
+
   &.-padded {
     margin-right: 24px;
   }
