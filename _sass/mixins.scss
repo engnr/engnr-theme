@@ -5,6 +5,8 @@
 @mixin container {
   @include center;
   max-width: $pageWidth;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 @mixin wide-container {
