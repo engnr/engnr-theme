@@ -22,14 +22,37 @@
   @include column(1/2, $cycle: 2, $gutter: 0);
 }
 
+// TODO: Rename to font-sizes
 @mixin sizes {
-  &.-mini     { font-size: $mini; }
-  &.-tiny     { font-size: $tiny; }
-  &.-small    { font-size: $small; }
-  &.-large    { font-size: $large; }
-  &.-big      { font-size: $big; }
-  &.-huge     { font-size: $huge; }
-  &.-massive  { font-size: $massive; }
+  &.-mini     { font-size: $font-mini; }
+  &.-tiny     { font-size: $font-tiny; }
+  &.-small    { font-size: $font-small; }
+  &.-large    { font-size: $font-large; }
+  &.-big      { font-size: $font-big; }
+  &.-huge     { font-size: $font-huge; }
+  &.-massive  { font-size: $font-massive; }
+}
+
+@mixin height-sizes {
+  &.-mini     { height: $block-mini; }
+  &.-tiny     { height: $block-tiny; }
+  &.-small    { height: $block-small; }
+  &.-medium   { height: $block-medium; }
+  &.-large    { height: $block-large; }
+  &.-big      { height: $block-big; }
+  &.-huge     { height: $block-huge; }
+  &.-massive  { height: $block-massive; }
+}
+
+@mixin width-sizes {
+  &.-mini     { width: $block-mini; }
+  &.-tiny     { width: $block-tiny; }
+  &.-small    { width: $block-small; }
+  &.-medium   { width: $block-medium; }
+  &.-large    { width: $block-large; }
+  &.-big      { width: $block-big; }
+  &.-huge     { width: $block-huge; }
+  &.-massive  { width: $block-massive; }
 }
 
 @mixin colors {

@@ -12,5 +12,12 @@
   > .header {
     margin-top: $bigSpacer;
   }
+
+  > .image {
+    display: block;
+    margin: $mediumSpacer auto;
+    width: auto;
+    @include height-sizes;
+  }
 }
 
