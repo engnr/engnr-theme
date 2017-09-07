@@ -1,0 +1,6 @@
+exclude:
+  - vendor
+  - script
+  - .travis.yml
+  - /assets/semantic-css/*.md
+  - /assets/semantic-css/*.html
