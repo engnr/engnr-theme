@@ -1,0 +1,42 @@
+.article-content {
+  line-height: 25px;
+
+  > * {
+    @include column(9/16, $offset: 2/16);
+    margin-top: 0;
+  }
+
+  > p:first-child,
+  > * > p:first-child {
+    margin-top: 0;
+  }
+
+  > .note {
+    @include column(3/16, $offset: 1/16);
+    font-size: $font-small;
+    line-height: $font-small * 2;
+    margin-top: 0;
+  }
+
+  > .note + .note {
+    @include column(3/16, $offset: 12/16);
+    margin-bottom: $smallSpacer;
+  }
+
+
+  &.-commented {
+    > * {
+      @include column(8/16, $offset: 2/16);
+    }
+
+    p {
+      font-size: $font-small;
+      line-height: $font-small * 2;
+    }
+
+    > .note {
+      font-size: $font-medium;
+      @include column(5/16, $offset: 0/16);
+    }
+  }
+}
