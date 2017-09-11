@@ -110,6 +110,51 @@ css:
     .text-block.-two
       | {{ page.short_text }}
 
+.theme-block
+  h2.header Text with notes
+  h3.component .article-content
+  .example
+    .article-content
+      div
+        p {{ page.short_text }}
+        p {{ page.short_text }}
+      .note {{ page.short_text }}
+
+      p {{ page.short_text }}
+
+      p {{ page.dummy_text }}
+      .note {{ page.short_text }}
+
+      .note {{ page.short_text }}
+
+      ul
+      {% for i in page.list %}
+        li {{ i }}
+      {% endfor %}
+      p.note {{ page.short_text }}
+
+      p {{ page.short_text }}
+      ul.note
+      {% for i in page.list %}
+        li {{ i }}
+      {% endfor %}
+
+      p {{ page.dummy_text }}
+      .note {{ page.dummy_text }}
+
+  h3.variant -commented
+  .example
+    .article-content.-commented
+      h2 1. Header
+      div
+        p 1.1. {{ page.short_text }}
+        p 1.2. {{ page.short_text }}
+      .note {{ page.short_text }}
+      p 1.3. {{ page.dummy_text }}
+      .note {{ page.short_text }}
+      p 1.4. {{ page.short_text }}
+      p 1.5. {{ page.short_text }}
+
 
 
 .theme-header Navigation
