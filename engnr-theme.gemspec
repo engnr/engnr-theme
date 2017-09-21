@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "engnr-theme"
-  spec.version       = "0.3.5"
+  spec.version       = "0.4.0"
   spec.authors       = ["Timur Ibatullin"]
   spec.email         = ["timur@ibatullin.com"]
 
