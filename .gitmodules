@@ -1,5 +1,5 @@
 [submodule "_sass/jeet"]
-	path = _sass/jeet
+	path = _sass/engnr/jeet
 	url = https://github.com/mojotech/jeet
 [submodule "assets/semantic-css"]
 	path = assets/semantic-css
