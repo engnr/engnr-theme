@@ -1,0 +1,463 @@
+---
+title: Engnr Theme
+layout: default
+short_text: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was."
+
+dummy_text: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath"
+
+list:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+
+short_paragraph: '<img alt="short paragraph" src="short-paragraph.png">'
+paragraph: '<img alt="paragraph" src="paragraph.png">'
+css:
+  - absolute_path: /theme.css
+---
+
+.theme-block
+  h1.header Engnr Theme Showcase
+
+.theme-header Typography
+
+.theme-block
+  h2.header Headers
+  .example.-padded
+  {% for i in (1..6) %}
+    h{{ i }} Header {{ i }}
+    {{ page.short_paragraph }}
+  {% endfor %}
+
+.theme-block
+  h2.header Paragraph
+  .example.-padded
+    h3 Header
+    p
+      | {{ page.dummy_text }}
+    p
+      | {{ page.dummy_text }}
+
+.theme-block
+  h2.header Basic elements
+  .example.-padded
+    h4 List
+    ul
+    {% for i in page.list %}
+      li {{ i }}
+    {% endfor %}
+    h4 Link
+    a(href="#") Link
+
+
+.theme-header Page
+
+.theme-block
+  h2.header Page Segment
+  h3.component .page-segment
+  .example
+    .page-segment
+      .container
+        h3 Header
+        p
+          | {{ page.dummy_text }}
+        h3 ul
+        ul
+        {% for i in page.list %}
+          li {{ i }}
+        {% endfor %}
+        h3 Link
+        a(href="#") Link
+
+  h3.variant -padded
+  .example
+    .page-segment.-padded
+      .container
+        h3 Header
+        | {{ page.dummy_text }}
+
+
+  h3.variant -divided
+  .example
+    .page-segment.-divided
+      .container
+        h3 Header
+        | {{ page.dummy_text }}
+
+.theme-block
+  h2.header Page Hero
+  h3.component page-hero
+  .example
+    .page-hero
+      .title Title
+      .lead {{ page.short_text }}
+
+
+.theme-block
+  h2.header Text Block
+  h3.variant text-block -one
+  .example
+    .text-block.-one
+      | {{ page.dummy_text }}
+
+  h3.variant text-block -two
+  .example
+    .text-block.-two
+      | {{ page.short_text }}
+    .text-block.-two
+      | {{ page.short_text }}
+
+.theme-block
+  h2.header Text with notes
+  h3.component .article-content
+  .example
+    .article-content
+      div
+        p {{ page.short_text }}
+        p {{ page.short_text }}
+      .note {{ page.short_text }}
+
+      p {{ page.short_text }}
+
+      p {{ page.dummy_text }}
+      .note {{ page.short_text }}
+
+      .note {{ page.short_text }}
+
+      ul
+      {% for i in page.list %}
+        li {{ i }}
+      {% endfor %}
+      p.note {{ page.short_text }}
+
+      p {{ page.short_text }}
+      ul.note
+      {% for i in page.list %}
+        li {{ i }}
+      {% endfor %}
+
+      p {{ page.dummy_text }}
+      .note {{ page.dummy_text }}
+
+  h3.variant -commented
+  .example
+    .article-content.-commented
+      h2 1. Header
+      div
+        p 1.1. {{ page.short_text }}
+        p 1.2. {{ page.short_text }}
+      .note {{ page.short_text }}
+      p 1.3. {{ page.dummy_text }}
+      .note {{ page.short_text }}
+      p 1.4. {{ page.short_text }}
+      p 1.5. {{ page.short_text }}
+
+
+
+.theme-header Navigation
+
+.theme-block
+  h2.header Navigation
+  h3.component main-nav
+  .example
+    nav.main-nav
+      .container
+        a.brand(href="#") Brand
+        .links
+        {% for item in page.list %}
+          a(href="#" class="item") {{ item }}
+        {% endfor %}
+          a(href="#" class="item -active") Active item
+
+.theme-block
+  h2.header Sub Navigation
+  h3.component sub-nav
+  .example
+    .sub-nav
+      .container
+        h3.header Header
+        .links
+          a.item Item
+          a.item.-active Active
+
+
+
+.theme-block
+  h2.header Page Footer
+  h3.component page-footer
+  .example
+    footer.page-footer
+      .container
+        small &copy; Engnr, 2016–2017
+
+  h3.variant -padded
+  .example
+    footer.page-footer.-padded
+      .container
+        small &copy; Engnr, 2016–2017
+
+
+.theme-header Lists
+
+.theme-block
+  h2.header Item List
+
+  h3.component item-list
+  .example.-padded
+    .item-list
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+  h3.variant -horizontal
+  .example.-padded
+    .item-list.-horizontal
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+  h3.variant -center
+  .example.-padded
+    .item-list.-center
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+
+.theme-block
+  h2.header Arrow List
+  h3.component arrow-list
+  .example.-padded
+    .arrow-list
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+.theme-block
+  h2.header Meta List
+  h3.component meta-list
+  .example.-padded
+    .meta-list
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+  .example.-padded
+    ul.meta-list
+      li.item.-date Date
+      li.item.-time Time
+
+  h3.variant -vertical
+  .example.-padded
+    .meta-list.-vertical
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+  .example.-padded
+    ul.meta-list.-vertical
+      li.item.-date Date
+      li.item.-time Time
+
+.theme-header Feed
+
+.theme-block
+  h2.header Post Feed
+  h3.component post-feed
+  .example
+    .post-feed
+      .post-item
+        h4.title Header 4
+        .content {{ page.short_text }}
+      .post-item
+        h4.title Header 4
+        .content {{ page.short_text }}
+      .post-item
+        h4.title Header 4
+        .content {{ page.short_text }}
+  .example
+    .post-feed
+      .post-item
+        h2.title Header 2
+        ul.meta-list.-vertical
+          li.item.-location Location
+          li.item.-date Date
+          li.item.-time Time
+          li.item.-author Author
+          li.item.-price Price
+        .content {{ page.short_text }}
+  .example
+    .post-feed
+      .post-item
+        h2.title Header 2
+        ul.meta-list
+          li.item.-location Location
+          li.item.-date Date
+          li.item.-time Time
+          li.item.-author Author
+          li.item.-price Price
+        .content {{ page.short_text }}
+
+.theme-block
+  h2.header Event Feed
+  h3.component event-feed
+  .example
+    .event-feed
+      .event-item
+        h4.title Header 4
+        .content {{ page.short_text }}
+      .event-item
+        h4.title Header 4
+        .content {{ page.short_text }}
+      .event-item
+        h4.title Header 4
+        .content {{ page.short_text }}
+
+
+.theme-block
+  h2.header Note Box
+  h3.component note-box
+  .example.-padded
+    .note-box
+    {% for i in page.list %}
+      li {{ i }}
+    {% endfor %}
+
+.theme-block
+  h2.header Contact Image
+  h3.component TODO: contact-image
+
+.theme-block
+  h2.header Page Error
+  h3.component page-error
+  .example
+    .page-error
+      .header Header
+      .text Message
+
+
+.theme-block
+  h2.header Post Image
+  h3.component TODO: post-image
+
+
+.theme-block
+  h2.header Icon Item
+  h3.component icon-item
+  .example.-padded
+    .icon-item.-author
+  .example.-padded
+    .icon-item.-date
+  .example.-padded
+    i.icon-item.-windows
+    i.icon-item.-mac
+    i.icon-item.-linux
+
+  h3.variant -padded
+  .example.-padded
+    i.icon-item.-windows.-padded
+    i.icon-item.-mac.-padded
+    i.icon-item.-linux.-padded
+
+  h3.variant -mini
+    .icon-item.-author.-mini
+  h3.variant -tiny
+    .icon-item.-author.-tiny
+  h3.variant -small
+    .icon-item.-author.-small
+  h3.variant -large
+    .icon-item.-author.-large
+  h3.variant -big
+    .icon-item.-author.-big
+  h3.variant -huge
+    .icon-item.-author.-huge
+  h3.variant -massive
+    .icon-item.-author.-massive
+
+  h3.variant -blueprint
+    .icon-item.-author.-blueprint
+  h3.variant -blue
+    .icon-item.-author.-blue
+  h3.variant -violet
+    .icon-item.-author.-violet
+  h3.variant -teal
+    .icon-item.-author.-teal
+
+.theme-header Engnr
+
+.theme-block
+  h2.header Engnr Process
+  h3.component engnr-process
+  .example
+    ol.engnr-process
+    {% for i in page.list %}
+      li.item {{ i }}
+    {% endfor %}
+
+.theme-block
+  h2.header Engnr Mission
+  h3.component engnr-mission
+  .example
+    .engnr-mission The mission
+
+
+.theme-block
+  h2.header Engnr Technologies
+  h3.component engnr-technologies
+  .example.-padded
+    .engnr-technologies
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+
+  h3.variant -technologies -horizontal
+  .example.-padded
+    .engnr-technologies.-horizontal
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+  h3.variant -center
+  .example.-padded
+    .engnr-technologies.-center
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+  h3.element item -huge
+  .example.-padded
+    .engnr-technologies
+    {% for i in page.list %}
+      .item.-huge {{ i }}
+    {% endfor %}
+
+.theme-block
+  h2.header Platform List
+  h3.component platform-list
+  .example.-padded
+    .platform-list
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+    .platform-list
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+    .platform-list
+    {% for i in page.list %}
+      .item {{ i }}
+    {% endfor %}
+
+
+script.
+  $('.example').before('<a href="#" class="highlight">Highlight</a>');
+
+  $('.theme-block > .highlight').click(function(event) {
+    event.preventDefault();
+    let example = $(this).next('.example');
+    example.toggleClass('-highlight');
+  });

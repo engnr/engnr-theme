@@ -1,0 +1,24 @@
+{
+  "name": "engnr-theme",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/engnr/engnr-theme.svg?branch=master)](https://travis-ci.org/engnr/engnr-theme)",
+  "main": "index.js",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engnr/engnr-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engnr/engnr-theme/issues"
+  },
+  "homepage": "https://github.com/engnr/engnr-theme#readme"
+}

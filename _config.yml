@@ -1,6 +1,32 @@
+title: Engnr Theme
+email: team@engnr.io
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Uses for theme site
+integrations:
+  google_analytics:
+    id: 'UA-90938007-2'
+  yandex_metrika:
+    id: 46542720
+
+assets:
+  semantic: /assets/semantic-css
+  semantic-components: /assets/semantic-css/components
+  css: /assets/css
+  js: /assets/js
+
+plugins:
+  - jekyll-pug
+
 exclude:
   - vendor
   - script
   - .travis.yml
   - /assets/semantic-css/*.md
   - /assets/semantic-css/*.html
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json

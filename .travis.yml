@@ -1,6 +1,7 @@
 language: ruby
 rvm:
 - 2.3.3
+before_install: npm install pug-cli -g
 script: "./script/cibuild"
 env:
   global:
