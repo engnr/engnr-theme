@@ -18,3 +18,8 @@ exclude:
   - .travis.yml
   - /assets/semantic-css/*.md
   - /assets/semantic-css/*.html
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
