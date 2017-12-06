@@ -5,7 +5,11 @@
 @import 'engnr/font-awesome/scss/_mixins.scss';
 @import 'engnr/font-awesome/scss/_path.scss';
 @import 'engnr/kube/src/_scss/variables';
+@import 'engnr/kube/src/_scss/mixins';
 @import 'engnr/kube/src/_scss/components/_tables';
+@import 'engnr/kube/src/_scss/components/_forms';
+@import 'engnr/kube/src/_scss/components/_buttons';
+@import 'engnr/kube/src/_scss/components/_sizing';
 
 @import 'engnr/fonts.scss';
 @import 'engnr/variables.scss';
