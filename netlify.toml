@@ -1,0 +1,2 @@
+[build]
+  command="./script/install_deps && jekyll build"
