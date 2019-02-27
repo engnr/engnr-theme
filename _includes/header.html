@@ -1,6 +1,6 @@
 <nav class="main-nav">
   <div class="container">
-    <a class="brand" href="/">{{ site.title }}</a>
+  <a class="brand" href="/">{% if site.data.settings.header %}{{ site.data.settings.header }}{% else %}{{ site.title }}{% endif %}</a>
 
     <div class="links">
       {% for item in site.data.settings.navigation %}
