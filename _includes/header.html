@@ -1,3 +1,4 @@
+{% unless page.header == false %}
 <nav class="main-nav">
   <div class="container">
   <a class="brand" href="/">{% if site.data.settings.header %}{{ site.data.settings.header }}{% else %}{{ site.title }}{% endif %}</a>
@@ -12,4 +13,4 @@
     </div>
   </div>
 </nav>
-
+{% endunless %}

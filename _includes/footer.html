@@ -1,4 +1,4 @@
-
+{% unless page.footer == false %}
 {% if page.padded_footer == false %}
   <footer class="page-footer">
 {% else %}
@@ -9,3 +9,4 @@
     <small>{{ site.data.settings.footer }}</small>
   </div>
 </footer>
+{% endunless %}
