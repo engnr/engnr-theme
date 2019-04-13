@@ -6,14 +6,23 @@ layout: default
   <h1 class="title">{{ page.title }}</h1>
 
   <ul class="meta-list _center">
+    {% if page.date %}
     <li class="item -date">
       <time datetime="{{ page.date | date: "%F" }}">
         {% include date-string.html date=page.date %}
       </time>
     </li>
+    {% endif %}
     {% if page.author %}
       <li class="item -author">{{ page.author }}</li>
     {% endif %}
+
+
+    {% for meta in page.meta %}
+      <li class="item -{{ meta.icon }}{% if meta.padded %} -padded{% endif %}">
+        {{ meta.text }}
+      </li>
+    {% endfor %}
   </ul>
 
   <div class="content">{{ content }}</div>
