@@ -138,6 +138,11 @@
     content: $fa-var-briefcase;
   }
 
+  &.-language:before {
+    @include icon;
+    content: $fa-var-language;
+  }
+
   &.-padded {
     margin-right: 24px;
   }
