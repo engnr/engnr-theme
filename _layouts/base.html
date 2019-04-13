@@ -1,0 +1,55 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="{{ site.assets.semantic-components }}/embed.css">
+  <script src="{{ site.assets.semantic-components }}/embed.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="{{ site.assets.semantic-components }}/video.css">
+  <script src="{{ site.assets.semantic-components }}/video.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="{{ site.assets.semantic-components }}/icon.css">
+
+  <link rel="stylesheet" type="text/css" href="{{ "/main.css" | prepend: site.assets.css }}?{{site.time | date: '%s%N'}}">
+
+  {% for style in page.css %}
+    {% if style.absolute_path %}
+    <link rel="stylesheet" type="text/css"
+          href="{{ style.absolute_path }}?{{site.time | date: '%s%N'}}">
+    {% else %}
+    <link rel="stylesheet" type="text/css"
+          href="{{ style.path
+                  | prepend: site.assets.css }}?{{site.time | date: '%s%N'}}">
+    {% endif %}
+  {% endfor %}
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="{{ site.baseurl }}/assets/favicons/manifest.json">
+  <link rel="mask-icon" href="{{ site.baseurl }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicons/favicon.ico">
+  <meta name="msapplication-config" content="{{ site.baseurl }}/assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>{{ site.title }}</title>
+
+  {% if jekyll.environment == "production" %}
+    {% include google_analytics.html
+       tracking_id = site.integrations.google_analytics.id %}
+    {% include yandex_metrika.html
+       tracking_id = site.integrations.yandex_metrika.id %}
+  {% endif %}
+</head>
+<body>
+  {{ content }}
+  <script src="{{ site.assets.js }}/tools.js"></script>
+</body>
+</html>
