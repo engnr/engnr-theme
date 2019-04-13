@@ -1,6 +1,6 @@
 .page-hero {
   @include container;
-  margin-top: $bigSpacer;
+  padding-top: $bigSpacer;
 
   > .title {
     @extend .h1;
