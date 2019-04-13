@@ -1,16 +1,25 @@
-{% unless page.header == false %}
-<nav class="main-nav">
+{% if page.lang %}
+  {% assign data = site.data[page.lang] %}
+{% else %}
+  {% assign data = site.data %}
+{% endif %}
+
+{% unless page.hide_header %}
+  <nav class="{{ include.class }} main-nav">
   <div class="container">
-  <a class="brand" href="/">{% if site.data.settings.header %}{{ site.data.settings.header }}{% else %}{{ site.title }}{% endif %}</a>
+  <a class="brand" href="{{ site.baseurl }}{{ site.data.languages[page.lang].root }}">
+    {% if data.settings.title %}{{ data.settings.title }}{% else %}{{ site.title }}{% endif %}
+  </a>
 
     <div class="links">
-      {% for item in site.data.settings.navigation %}
+      {% for item in data.settings.navigation %}
       <a class="item{% if page.url == item.url
                           or (page.navigation_group != nil and page.navigation_group == item.group)
                     %} -active{% endif %}"
          href="{{ item.url }}">{{ item.title }}</a>
       {% endfor %}
     </div>
+    {{ include.content }}
   </div>
 </nav>
 {% endunless %}

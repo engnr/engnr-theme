@@ -1,12 +1,13 @@
-{% unless page.footer == false %}
-{% if page.padded_footer == false %}
-  <footer class="page-footer">
+{% unless page.hide_footer %}
+{% if page.padded_footer == true %}
+  <footer class="{{ include.class }} page-footer -padded">
 {% else %}
-  <footer class="page-footer -padded">
+  <footer class="{{ include.class }} page-footer">
 {% endif %}
 
   <div class="container">
     <small>{{ site.data.settings.footer }}</small>
+    {{ include.content }}
   </div>
 </footer>
 {% endunless %}
