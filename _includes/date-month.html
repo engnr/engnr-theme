@@ -1,3 +1,4 @@
+{% if page.lang == "ru" %}
 {% assign m = include.date | date: "%-m" %}
 {% case m %}
   {% when '1' %}января
@@ -13,3 +14,7 @@
   {% when '11' %}ноября
   {% when '12' %}декабря
 {% endcase %}
+{% else %}
+  {% assign m = include.date | date: "%B" %}
+  {{ m }}
+{% endif %}
